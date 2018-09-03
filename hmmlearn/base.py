@@ -724,7 +724,7 @@ class _BaseHMMwT(BaseEstimator):
         Terminal state occupation distribution.
     """
     def __init__(self, n_components=1, startprob_prior=1.0, 
-                 transmat_prior=1.0, endprob_prior=1.0
+                 transmat_prior=1.0, endprob_prior=1.0,
                  algorithm="viterbi", random_state=None,
                  n_iter=10, tol=1e-2, verbose=False,
                  params=string.ascii_letters,
@@ -1071,9 +1071,9 @@ class _BaseHMMwT(BaseEstimator):
             self.startprob_ = np.full(self.n_components, init)
         if 't' in self.init_params or not hasattr(self, "transmat_"):
             self.transmat_ = np.full((self.n_components, self.n_components),
+                                     init)
         if 'e' in self.init_params or not hasattr(self, "endprob_"):
             self.endprob_ = np.full(self.n_components, init)
-                                     init)
 
     def _check(self):
         """Validates model parameters prior to fitting.

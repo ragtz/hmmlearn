@@ -45,7 +45,9 @@ Installation
 First make sure you have installed all the dependencies listed above. Then run
 the following command::
 
-    pip install -U --user hmmlearn
+    Install from source (~/hmmlearn)
+    $ ./setup.py build
+    $ sudo ./setup.py install
 
 ..
    Development
